@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniket's Fitness</title>
+
+    <style>
+        body{
+            background-image: url("images/bg/Payment.jpg");
+            background-size: cover;
+            color: white;
+            box-sizing: border-box;
+        }
+        .logo{
+            /* border: 2px solid white; */
+            display: inline-block;
+            position: absolute;
+            top: 0px;
+            left: 10px;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+        }
+        img{
+            width: 120px;
+            height: 80px;
+            border-radius: 4px;
+        }
+        .logo a{
+            text-decoration: none;
+            color: white;
+        }
+        .navigation{
+            background-color: black;
+            border: 2px solid white;
+            border-radius: 5px;
+            width: 543px;
+            margin: 16px auto 0px auto;
+            padding: 0px;
+            overflow: auto;
+            font-size: 20px;
+        }
+        .navigation ul{
+            margin: 0px;
+        }
+        .navigation ul li{
+            list-style: none;
+            float: left;
+            margin: 3px 3px;
+            padding: 5px 11px;
+        }
+        .navigation ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        .navigation ul li a:hover{
+            text-decoration: underline;
+        }
+        .navigation ul li a:active{
+            text-decoration: underline;
+            color: grey;
+        }
+        .bttn{
+            background-color: black;
+            border: 2px solid white;
+            border-radius: 5px;
+            display: inline-block;
+            position: absolute;
+            top: 16px;
+            right: 10px;
+            padding: 0px;
+        }
+        .bttn .btn{
+            margin: 9px 8px;
+            padding: 0px 4px;  
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .bttn .btn:hover{
+            text-decoration: underline;
+        }
+        .registrationform{
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 7px;
+            width: 30rem;
+            height: 50rem;
+            margin: 90px auto;
+            padding: 0px 40px;
+            font-family: lucida handwriting;
+        }
+        .registrationform h3{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            text-decoration: underline;
+            margin-top: 20px;
+        }
+        .signup{
+            text-align: center;
+        }
+        .footer{
+    background: darkorange;
+}
+.footer .footer-link{
+    font-size:1rem;
+    color:white;
+    padding:0 1.875rem;
+  }
+  .footer .footer-link:hover{
+    color:white;
+  }
+  .footer a i{
+    font-size: 1.5rem;
+    color:white;
+    padding:0 1rem;
+  }
+
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <!-- for logo  -->
+        <div class="navigation">
+        <div class="logo">
+            <a href="#"><img src="Images/logo.jpg" alt="logo not found"></a>
+            </div>
+        <div class="bttn">
+            <a href="index.html"><button class="btn">Home</button></a>
+            <a href="Contactus.html"><button class="btn">Contact Us</button></a>
+        </div>
+        </div>
+    </header>
+
+    <div class="registrationform">
+        <form id="idForm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <h2>Payment Page</h2><br><br>
+            <h3>For Cash</h3><br><br>
+            <input type="radio" onclick="idForm()" name="payment" value="COD"> Cash On Delivery &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+            <h3>For Online Payments</h3><br><br>
+            <input type="radio" onclick="idForm()" name="payment" value="card"> Debit Card &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+            <input type="radio" onclick="idForm()" name="payment" value="card"> Credit Card &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+            <input type="radio" onclick="idForm()" name="payment" value="Net"> Net Banking &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+            <input type="radio" onclick="idForm()" name="payment" value="UPI"> UPI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+            
+            
+        </form>
+    </div>
+    <footer id="footer">
+        <div class="footer py-5">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12 text-center">
+              <div class="footer-social pt-4 text-center">
+                  <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f" ></i></a>
+                  <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter" ></i></a>
+                  <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube" ></i></a>
+                  <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram" ></i></a>
+                  </div>
+              </div>
+              <div class="col-sm-12">
+                  <div class="footer-copy">
+                    <div class="copy-right text-center pt-5">
+                      <p class="text-light">© 2022. Hungers. All rights reserved.</p>
+                    </div>
+                  </div>
+          </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+<script type="text/javascript">
+        
+        function idForm(){
+   var selectvalue = $('input[name=payment]:checked', '#idForm').val();
+
+
+if(selectvalue == "COD"){
+window.open('Finalpage.html','_self');
+return true;
+}
+else if(selectvalue == "card"){
+window.open('checkout.html','_self');
+return true;
+}else if(selectvalue == 'Net'){
+window.open('Finalpage.html','_self');
+return true;
+}else if(selectvalue == 'UPI'){
+window.open('Finalpage.html','_self');
+return true;
+}
+return false;
+};
+    </script>
+</body>
+</html>

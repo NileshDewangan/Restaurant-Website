@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aniket's Fitness</title>
+    
+        <style>
+            body{
+                background-size: cover;
+                color: white;
+                
+            }
+            .logo{
+                /* border: 2px solid white; */
+                display: inline-block;
+                position: absolute;
+                top: 0px;
+                left: 10px;
+                text-align: center;
+                width: 200px;
+                height: 200px;
+            }
+            img{
+                width: 120px;
+                height: 80px;
+                border-radius: 4px;
+            }
+            .logo a{
+                text-decoration: none;
+                color: white;
+            }
+            .navigation{
+                background-color: black;
+                border: 2px solid white;
+                border-radius: 5px;
+                width: 543px;
+                margin: 16px auto 0px auto;
+                padding: 0px;
+                overflow: auto;
+                font-size: 20px;
+            }
+            .navigation ul{
+                margin: 0px;
+            }
+            .navigation ul li{
+                list-style: none;
+                float: left;
+                margin: 3px 3px;
+                padding: 5px 11px;
+            }
+            .navigation ul li a{
+                text-decoration: none;
+                color: white;
+            }
+            .navigation ul li a:hover{
+                text-decoration: underline;
+            }
+            .navigation ul li a:active{
+                text-decoration: underline;
+                color: grey;
+            }
+            .bttn{
+                background-color: black;
+                border: 2px solid white;
+                border-radius: 5px;
+                display: inline-block;
+                position: absolute;
+                top: 16px;
+                right: 10px;
+                padding: 0px;
+            }
+            .bttn .btn{
+                margin: 9px 8px;
+                padding: 0px 4px;  
+                font-size: 14px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            .bttn .btn:hover{
+                text-decoration: underline;
+            }
+            * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font: normal bold 16px/normal tahoma;
+}
+
+article {
+    width: 300px;
+    text-align: center;
+    background-color: darkorange;
+    border-radius: 10px;
+    margin: 10rem auto 20px;
+    padding: 30re;
+    overflow: hidden;
+    box-shadow: 3px 3px 10px #ccc;
+}
+
+article h3 {
+    padding: 10px;
+    color: #fff;
+}
+article .count {
+    padding: 5px;
+}
+article #timer{
+    padding: 5px;
+    color: crimson;
+    background-color: aliceblue;
+    border-radius: 2px;
+}
+.footer{
+    background: darkorange;
+}
+.footer .footer-link{
+    font-size:1rem;
+    color:white;
+    padding:0 1.875rem;
+  }
+  .footer .footer-link:hover{
+    color:white;
+  }
+  .footer a i{
+    font-size: 1.5rem;
+    color: white;
+    padding:0 1rem;
+  }
+  .container{
+      text-align: center;
+      background-size: cover;
+      margin: 10rem auto 20px;
+      
+  }
+  .writx h1,h2,h3{
+      color: black;
+  }
+
+            </style>
+    </head>
+    <body>
+        <header>
+            <!-- for logo  -->
+            <div class="navigation">
+            <div class="logo">
+                <a href="#"><img src="Images/logo.jpg" alt="logo not found"></a>
+                </div>
+            <div class="bttn">
+                <a href="index.html"><button class="btn">Home</button></a>
+                <a href="Contactus.html"><button class="btn">Contact Us</button></a>
+            </div>
+            </div>
+        </header>
+        <section id="content">
+        <div class="writx">
+            <div class="container">
+        <h1>Thank You</h1>
+        <h2>For Ordering Food From Us.</h2>
+        <h3>Your Food Will be Delivered Soon.</h3>
+        </div>
+        </div>
+        </section>
+        <article class="clock" id="model3">
+            <h3></h3>
+          
+            <div class="count">
+              <div id="timer"></div>
+            </div>
+          </article>
+          <footer id="footer">
+            <div class="footer py-5">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-12 text-center">
+                  <div class="footer-social pt-4 text-center">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                      </div>
+                  </div>
+                  <div class="col-sm-12">
+                      <div class="footer-copy">
+                        <div class="copy-right text-center pt-5">
+                          <p class="text-light">© 2022. Hungers. All rights reserved.</p>
+                        </div>
+                      </div>
+              </div>
+            </div>
+        </footer>
+          <script>
+              var h3 = document.getElementsByTagName("h3");
+h3[0].innerHTML = "Food Will be Delivered Within";
+
+var sec         = 1800,
+    countDiv    = document.getElementById("timer"),
+    secpass,
+    countDown   = setInterval(function () {
+        'use strict';
+        
+        secpass();
+    }, 1000);
+
+function secpass() {
+    'use strict';
+    
+    var min     = Math.floor(sec / 60),
+        remSec  = sec % 60;
+    
+    if (remSec < 10) {
+        
+        remSec = '0' + remSec;
+    
+    }
+    if (min < 10) {
+        
+        min = '0' + min;
+    
+    }
+    countDiv.innerHTML = min + ":" + remSec;
+    
+    if (sec > 0) {
+        
+        sec = sec - 1;
+        
+    } else {
+        
+        clearInterval(countDown);
+        
+        countDiv.innerHTML = 'countdown done';
+        
+    }
+}
+          </script>
+</body>
+</html>
